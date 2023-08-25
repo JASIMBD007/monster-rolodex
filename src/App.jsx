@@ -7,9 +7,11 @@ function App () {
   console.log(searchField);
   const [monsters, setMonsters] = useState([]);
 
-  useEffect('https://jsonplaceholder.typicode.com/users')
-    .then(res => res.json())
-    .then(users => setMonsters(users))
+  useEffect(() => {
+    fetch('https://jsonplaceholder.typicode.com/users')
+      .then(res => res.json())
+      .then(users => setMonsters(users))
+  }, []);
 
   const onSearchChange = (event) => {
     const searchFieldString = event.target.value.toLowerCase();
