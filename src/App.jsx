@@ -29,7 +29,7 @@ function App () {
 
 
   return (
-    <div>
+    <div className='App'>
       <h1 className='app-title'>Monsters Rolodex</h1>
       <SearchBox
         className='monsters-search-box'
